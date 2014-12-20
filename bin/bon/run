@@ -2,8 +2,11 @@
 
 # TODO: the following two paragraphs should be moved to bon
 
-if [[ -z "${NODE_PATH}" ]]; then
-  # if the $NODE_PATH is not set (length is zero) - try to guess...
+THE_MODULE="datomic-free" # there is or should be a bon-var for this
+BON_SCRIPT="bin/${THE_MODULE}"
+
+if [[ -z "${NODE_PATH}" || ! -d "${NODE_PATH}/${THE_MODULE}" ]]; then
+  # if the $NODE_PATH is not set (length is zero), or it doesn't contain THE_MODULE -- try to guess it
   for path in "/usr/lib/node_modules" "/usr/local/lib/node_modules" "$(dirname $(which npm))/../lib/node_modules"
   do
     if [[ -d "${path}" ]]; then
@@ -18,7 +21,5 @@ if [[ -z "${NODE_PATH}" ]]; then
   echo "Please set \$NODE_PATH - where global node_modules are installed."
   exit 1
 fi
-
-BON_SCRIPT="bin/datomic-free"
 
 source bon "$@"
