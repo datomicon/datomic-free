@@ -1,9 +1,9 @@
 #!/usr/bin/env bash
 
-# TODO: the following two paragraphs should be moved to bon
-
 THE_MODULE="datomic-free" # there is or should be a bon-var for this
 BON_SCRIPT="bin/${THE_MODULE}"
+
+# TODO: the following two paragraphs should be moved to bon
 
 if [[ -z "${NODE_PATH}" || ! -d "${NODE_PATH}/${THE_MODULE}" ]]; then
   # if the $NODE_PATH is not set (length is zero), or it doesn't contain THE_MODULE -- try to guess it

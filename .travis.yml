@@ -10,6 +10,7 @@ install:
 before_script:
   - echo "\$NODE_PATH is '${NODE_PATH}'"
   - pwd
+  - ls $NODE_PATH
   - which datomic-free
 notifications:
   email:
