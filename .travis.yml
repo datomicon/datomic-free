@@ -9,7 +9,8 @@ install:
   - npm install
 before_script:
   - echo "\$NODE_PATH is '${NODE_PATH}'"
-  - pwd # for more confidence it worked
+  - pwd
+  - which datomic-free
 notifications:
   email:
     recipients:
