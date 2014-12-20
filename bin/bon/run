@@ -1,13 +1,24 @@
 #!/usr/bin/env bash
 
-# check for $NODE_PATH and try to guess-set it if missing
-[[ -n "${NODE_PATH}" ]] || export NODE_PATH="$(dirname $(which npm))/../lib/node_modules"
+# TODO: the following two paragraphs should be moved to bon
 
-if [[ ! -d $NODE_PATH ]]; then
-  echo "Please set \$NODE_PATH - assumed ${NODE_PATH} does not exist."
+if [[ -z "${NODE_PATH}" ]]; then
+  # if the $NODE_PATH is not set (length is zero) - try to guess...
+  for path in "/usr/lib/node_modules" "/usr/local/lib/node_modules" "$(dirname $(which npm))/../lib/node_modules"
+  do
+    if [[ -d "${path}" ]]; then
+      NODE_PATH="${path}"
+      break
+    fi
+  done
+fi
+
+if [[ -z "${NODE_PATH}" ]]; then
+  # still, $NODE_PATH is not set - bad luck
+  echo "Please set \$NODE_PATH - where global node_modules are installed."
   exit 1
 fi
 
-export BON_SCRIPT="bin/datomic-free"
+BON_SCRIPT="bin/datomic-free"
 
 source bon "$@"

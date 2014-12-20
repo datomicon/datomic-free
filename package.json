@@ -32,7 +32,8 @@
   "devDependencies": {},
   "scripts": {
     "preinstall": "./bin/bon/install",
-    "install": "./node_modules/.bin/install-g || true"
+    "install": "./node_modules/.bin/install-g || true",
+    "test": "which datomic-free"
   },
   "engines": {
     "node": "*"

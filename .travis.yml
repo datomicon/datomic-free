@@ -1,0 +1,17 @@
+language: node_js
+node_js:
+  - 0.10
+branches:
+  only:
+    - active
+    - test
+install:
+  - npm install
+before_script:
+  - echo "\$NODE_PATH is '${NODE_PATH}'"
+notifications:
+  email:
+    recipients:
+      - om@soundsapiens.com
+    on_success: change
+    on_failure: always
