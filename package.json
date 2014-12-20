@@ -33,7 +33,7 @@
   "scripts": {
     "preinstall": "./bin/bon/install",
     "install": "./node_modules/.bin/install-g || true",
-    "test": "datomic-free --help"
+    "test": "cd .. && datomic-free --help"
   },
   "engines": {
     "node": "*"
