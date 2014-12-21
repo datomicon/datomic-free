@@ -1,0 +1,6 @@
+#!/usr/bin/env bash
+
+BON_NAME="datomic-free" # the module / package name
+BON_SCRIPT="bin/datomic-free" # the scipt to be run
+
+source bon "$@"

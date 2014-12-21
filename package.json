@@ -22,17 +22,18 @@
     "Orlin M Bozhinov <om@soundsapiens.com> (https://github.com/orlin)"
   ],
   "bin": {
-    "datomic-free": "./bin/bon/run"
+    "datomic-free": "./bin/bon/invoke"
   },
   "preferGlobal": true,
   "dependencies": {
-    "bon": "^0.1.1",
+    "bon": "^0.1.2",
     "install-g": "*"
   },
   "devDependencies": {},
   "scripts": {
     "preinstall": "./bin/bon/install",
-    "install": "./node_modules/.bin/install-g || true"
+    "install": "node_modules/.bin/install-g || true",
+    "test": "cd .. && datomic-free --help"
   },
   "engines": {
     "node": "*"
