@@ -22,7 +22,7 @@
     "Orlin M Bozhinov <om@soundsapiens.com> (https://github.com/orlin)"
   ],
   "bin": {
-    "datomic-free": "./bin/bon/run"
+    "datomic-free": "./bin/bon/invoke"
   },
   "preferGlobal": true,
   "dependencies": {
