@@ -6,7 +6,7 @@ branches:
     - active
     - test
 install:
-  - npm install
+  - npm install -g
 before_script:
   - echo "\$NODE_PATH is '${NODE_PATH}'"
   - pwd
