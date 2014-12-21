@@ -7,8 +7,16 @@ start Datomic Free transactors and upgrade to newer versions.
 For first time users:
 
 ### With NPM (Node.js)
+ [![NPM](https://nodei.co/npm/datomic-free.png?mini=true)](https://www.npmjs.org/package/datomic-free)
 
-[![NPM](https://nodei.co/npm/datomic-free.png?mini=true)](https://www.npmjs.org/package/datomic-free)
+Must also install bon globally, paste the following on your command prompt:
+
+```sh
+npm i -g datomic-free
+npm i -g bon # this line is due to npm / install-g bug -- should soon disappear
+```
+
+[![Build Status](https://img.shields.io/travis/datomicon/datomic-free.svg?style=flat)]()
 
 If `datomic-free` doesn't work, set / export `$NODE_PATH` to the dir containing global `node_modules`.
 
