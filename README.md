@@ -16,7 +16,7 @@ npm i -g datomic-free
 npm i -g bon # this line is due to npm / install-g bug -- should soon disappear
 ```
 
-[![Build Status](https://img.shields.io/travis/datomicon/datomic-free.svg?style=flat)]()
+[![Build Status](https://img.shields.io/travis/datomicon/datomic-free.svg?style=flat)](https://travis-ci.org/datomicon/datomic-free)
 
 If `datomic-free` doesn't work, set / export `$NODE_PATH` to the dir containing global `node_modules`.
 
