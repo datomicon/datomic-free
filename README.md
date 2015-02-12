@@ -9,21 +9,17 @@ For first time users:
 ### With NPM (Node.js)
  [![NPM](https://nodei.co/npm/datomic-free.png?mini=true)](https://www.npmjs.org/package/datomic-free)
 
-Must also install bon globally, paste the following on your command prompt:
-
-```sh
-npm i -g datomic-free
-npm i -g bon # this line is due to npm / install-g bug -- should soon disappear
-```
+This `npm install datomic-free` also auto-installs the [bon](https://www.npmjs.com/package/bon) dependency, globally.
 
 [![Build Status](https://img.shields.io/travis/datomicon/datomic-free.svg?style=flat)](https://travis-ci.org/datomicon/datomic-free)
 
-If `datomic-free` doesn't work, set / export `$NODE_PATH` to the dir containing global `node_modules`.
+If `datomic-free` doesn't work - set / export `$NODE_PATH` to the dir containing your global `node_modules`.  Run `dirname $(which bon)` to find out where they go.
 
-Also, please choose either the `npm` approach above or the manual one below.
+NOTE: please choose either the `npm` approach above or the manual one below.
 If you do both, the script may not run as it should.
-To test if that might be the case: run `type -a datomic-free`
-for which there should be only one `datomic-free`.
+Verify with `type -a datomic-free` for which there should be only one `datomic-free`.
+
+If unhappy with this npm distribution just `npm rm -g datomic-free`.
 
 ### Manually (zsh)
 
@@ -35,6 +31,14 @@ $ ~/.datomic-free/bin/datomic-free start
 $ echo 'alias datomic-free=$HOME/.datomic-free/bin/datomic-free' >> ~/.zshrc
 $ . ~/.zshrc
 ```
+
+### Upgrade
+
+The node package versions are independent of [datomic-free releases](https://github.com/cldwalker/datomic-free/releases) or datomic itself.
+Just like with the manual install, the code is cloned to `~/.datomic-free/` and
+upgrades would be manual too.
+
+Some day there may be a `datomic-free upgrade` command to `git pull` as a convenience.
 
 ## Usage
 
