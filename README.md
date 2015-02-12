@@ -82,6 +82,10 @@ To use another version you've already installed:
 $ datomic-free use 0.8.3646
 ```
 
+## Develop
+
+For `npm test` to pass -- `npm install -g batshit` is needed.
+
 ## Further
 
 See [datomic-free](https://github.com/cldwalker/datomic-free#todo)'s TODO section about possible improvements.  Some of these have already been implemented with [dbin](https://github.com/datomicon/dbin) which makes it possible to run both datomic-free and datomic-pro servers - using optional JSON configuration.

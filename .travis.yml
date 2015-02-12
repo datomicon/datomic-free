@@ -8,6 +8,7 @@ branches:
     - test
 install:
   - npm install # should install itself globally via install-g
+  - npm i -g batshit # is a development dependency - without auto-install
 before_script:
   - which bon # bon must also have automatically got installed
 notifications:
