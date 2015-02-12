@@ -8,13 +8,8 @@ branches:
     - test
 install:
   - npm install # should install itself globally via install-g
-  - which bon # illustrates that bon fails to auto-install
-  - npm install -g bon # until the install-g bug is fixed
 before_script:
-  - echo "\$NODE_PATH is '${NODE_PATH}'"
-  - pwd
-  - ls $NODE_PATH
-  - which datomic-free
+  - which bon # bon must also have automatically got installed
 notifications:
   email:
     recipients:
