@@ -34,11 +34,13 @@ $ . ~/.zshrc
 
 ### Upgrade
 
-The node package versions are independent of [datomic-free releases](https://github.com/cldwalker/datomic-free/releases) or datomic itself.
+The node package versions are independent of [datomic-free releases](https://github.com/cldwalker/datomic-free/releases) or Datomic itself.
 Just like with the manual install, the code is cloned to `~/.datomic-free/` and
 upgrades would be manual too.
 
 Some day there may be a `datomic-free upgrade` command to `git pull` as a convenience.
+
+Upgrading Datomic is called `datomic-free update`, covered in the Usage section below.
 
 ## Usage
 
@@ -80,21 +82,17 @@ To use another version you've already installed:
 $ datomic-free use 0.8.3646
 ```
 
+## Further
+
+See [datomic-free](https://github.com/cldwalker/datomic-free#todo)'s TODO section about possible improvements.  Some of these have already been implemented with [dbin](https://github.com/datomicon/dbin) which makes it possible to run both datomic-free and datomic-pro servers - using optional JSON configuration.
+
 ## License
 
 See LICENSE.txt. This project is in no way affiliated with Datomic (Metadata Partners, LLC).
 
 ## Credits
 
+* Thanks to @cldwalker for the datomic-free script
 * Thanks to @richhickey and @stuarthalloway for datomic
 * Thanks to @rkneufeld for the downloading function of the shell script
 * Bug fixes: @sherbondy
-
-## TODO
-
-* Allow other config and args to bin/transactor
-* rest command to execute bin/rest
-* better help
-* better exit codes
-* better error checking for use
-* convert this readme to a man page
