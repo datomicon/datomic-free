@@ -2,5 +2,6 @@
 
 BON_NAME="datomic-free" # the module / package name
 BON_SCRIPT="bin/datomic-free" # the scipt to be run
+BON_HELP_FILE="bin/bon/help.md" # appends to --help
 
 source bon "$@"

@@ -9,21 +9,17 @@ For first time users:
 ### With NPM (Node.js)
  [![NPM](https://nodei.co/npm/datomic-free.png?mini=true)](https://www.npmjs.org/package/datomic-free)
 
-Must also install bon globally, paste the following on your command prompt:
+This `npm install datomic-free` also auto-installs the [bon](https://www.npmjs.com/package/bon) dependency, globally.
 
-```sh
-npm i -g datomic-free
-npm i -g bon # this line is due to npm / install-g bug -- should soon disappear
-```
+[![Build Status](https://img.shields.io/travis/datomicon/datomic-free.svg?style=flat)](https://travis-ci.org/datomicon/datomic-free)
 
-[![Build Status](https://img.shields.io/travis/datomicon/datomic-free.svg?style=flat)]()
+If `datomic-free` doesn't work - set / export `$NODE_PATH` to the dir containing your global `node_modules`.  Run `dirname $(which bon)` to find out where they go.
 
-If `datomic-free` doesn't work, set / export `$NODE_PATH` to the dir containing global `node_modules`.
-
-Also, please choose either the `npm` approach above or the manual one below.
+NOTE: please choose either the `npm` approach above or the manual one below.
 If you do both, the script may not run as it should.
-To test if that might be the case: run `type -a datomic-free`
-for which there should be only one `datomic-free`.
+Verify with `type -a datomic-free` for which there should be only one `datomic-free`.
+
+If unhappy with this npm distribution just `npm rm -g datomic-free`.
 
 ### Manually (zsh)
 
@@ -35,6 +31,16 @@ $ ~/.datomic-free/bin/datomic-free start
 $ echo 'alias datomic-free=$HOME/.datomic-free/bin/datomic-free' >> ~/.zshrc
 $ . ~/.zshrc
 ```
+
+### Upgrade
+
+The node package versions are independent of [datomic-free releases](https://github.com/cldwalker/datomic-free/releases) or Datomic itself.
+Just like with the manual install, the code is cloned to `~/.datomic-free/` and
+upgrades would be manual too.
+
+Some day there may be a `datomic-free upgrade` command to `git pull` as a convenience.
+
+Upgrading Datomic is called `datomic-free update`, covered in the Usage section below.
 
 ## Usage
 
@@ -76,21 +82,17 @@ To use another version you've already installed:
 $ datomic-free use 0.8.3646
 ```
 
+## Further
+
+See [datomic-free](https://github.com/cldwalker/datomic-free#todo)'s TODO section about possible improvements.  Some of these have already been implemented with [dbin](https://github.com/datomicon/dbin) which makes it possible to run both datomic-free and datomic-pro servers - using optional JSON configuration.
+
 ## License
 
 See LICENSE.txt. This project is in no way affiliated with Datomic (Metadata Partners, LLC).
 
 ## Credits
 
+* Thanks to @cldwalker for the datomic-free script
 * Thanks to @richhickey and @stuarthalloway for datomic
 * Thanks to @rkneufeld for the downloading function of the shell script
 * Bug fixes: @sherbondy
-
-## TODO
-
-* Allow other config and args to bin/transactor
-* rest command to execute bin/rest
-* better help
-* better exit codes
-* better error checking for use
-* convert this readme to a man page
