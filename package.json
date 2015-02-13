@@ -35,9 +35,8 @@
     "install": "node_modules/.bin/install-g || true",
     "test": "batshit -t test"
   },
-  "engines": {
-    "node": "*"
-  },
+  "os" : [ "!win32" ],
+  "engines": { "node": "*" },
   "licenses": [
     {
       "type": "MIT",
